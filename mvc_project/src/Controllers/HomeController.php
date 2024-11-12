@@ -5,7 +5,7 @@ use App\Views\View;
 
 class HomeController {
     public function index() {
-        $apiKey = 'bdeb16b1d565efdcd54849aed1d106ca';  
+        $apiKey = '17538af04c6968278e2b5f0b1db58ba5';  
         $movies = $this->fetchPopularMovies($apiKey);
 
         $view = new View();

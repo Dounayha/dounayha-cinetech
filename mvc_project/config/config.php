@@ -1,11 +1,5 @@
 <?php
-return [
-    'api_key' => 'bdeb16b1d565efdcd54849aed1d106ca',
-    'base_url' => 'https://api.themoviedb.org/3',
-    'db' => [
-        'host' => 'localhost',
-        'dbname' => 'cinetech',
-        'user' => 'root',
-        'password' => ''
-    ]
-];
+// config/config.php
+define('TMDB_API_KEY', '17538af04c6968278e2b5f0b1db58ba5');
+define('TMDB_API_BASE_URL', 'https://api.themoviedb.org/3');
+
