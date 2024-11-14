@@ -20,7 +20,8 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">Films</a>
                 <div class="dropdown-content">
-                    <a href="?action=movie">Tous les Films</a>
+                <a href="index.php?action=all_movies">Tous les films</a>
+                    <!-- <a href="?action=movie">Tous les Films</a> -->
                     <a href="?action=movie&genre=28">Action</a>
                     <a href="?action=movie&genre=16">Animation</a>
                     <a href="?action=movie&genre=878">Science Fiction</a>

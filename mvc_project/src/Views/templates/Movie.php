@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
-    <h1><?= htmlspecialchars($title) ?></h1>
-
+            <h1>Tous les films</h1>
     <div class="movies-grid">
         <?php foreach ($movies as $movie): ?>
             <div class="movie-card">

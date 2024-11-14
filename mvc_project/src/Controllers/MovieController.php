@@ -68,6 +68,19 @@ class MovieController {
             'category' => $category         // Nom de la catégorie pour affichage
         ]);
     }
+
+      // Méthode pour afficher les films les mieux notés
+      public function topRated() {
+        $model = new MovieModel();
+        $movies = $model->getTopRatedMovies();
+
+        $view = new View();
+        $view->render('Movie', [
+            'title' => 'Films les mieux notés',
+            'movies' => $movies
+        ]);
+    }
+
     public function index() {
         $model = new MovieModel();
         $movies = $model->getAllMovies();

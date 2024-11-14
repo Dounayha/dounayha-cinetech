@@ -11,6 +11,14 @@ class MovieModel {
         return $data['results']; // Retourne tous les films
     }
 
+
+    // Méthode pour récupérer les films les mieux notés
+    public function getTopRatedMovies() {
+        $url = "https://api.themoviedb.org/3/movie/top_rated?api_key=17538af04c6968278e2b5f0b1db58ba5&language=fr-FR";
+        $response = file_get_contents($url);
+        $data = json_decode($response, true);
+        return $data['results'];
+    }
     // Méthode pour récupérer les films par catégorie
     public function getMoviesByCategory($category) {
         $url = "https://api.themoviedb.org/3/discover/movie?api_key=17538af04c6968278e2b5f0b1db58ba5&language=fr-FR&with_genres=" . urlencode($category);
