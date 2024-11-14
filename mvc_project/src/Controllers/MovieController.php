@@ -44,7 +44,7 @@ class MovieController {
         $view = new View();
         
         // Passe les données à la vue pour affichage
-        $view->render('movieDetails', [
+        $view->render('MovieDetails', [
             'title' => $movie['title'],  // Titre du film
             'movie' => $movie,           // Détails du film
         ]);
@@ -62,10 +62,20 @@ class MovieController {
         $view = new View();
         
         // Passer les films filtrés par catégorie à la vue pour affichage
-        $view->render('movies', [
+        $view->render('Movie', [
             'title' => "Films - $category",  // Titre de la page avec la catégorie
             'movies' => $movies,            // Liste des films filtrés
             'category' => $category         // Nom de la catégorie pour affichage
+        ]);
+    }
+    public function index() {
+        $model = new MovieModel();
+        $movies = $model->getAllMovies();
+    
+        $view = new View();
+        $view->render('Movie', [
+            'title' => 'Tous les films populaires',
+            'movies' => $movies
         ]);
     }
 }

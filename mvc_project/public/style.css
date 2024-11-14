@@ -28,6 +28,10 @@ h1 {
     text-align: center;
 }
 
+.movie-card:hover {
+    transform: translateY(-5px); /* Effet de survol */
+}
+
 .movie-card img {
     width: 100%;
     border-radius: 8px;
@@ -58,7 +62,7 @@ h1 {
 /* Image du film */
 .movie-details img {
     width: 80%;  /* Largeur de l'image */
-    max-width: 400px; /* Limite la largeur de l'image */
+    max-width: 300px; /* Limite la largeur de l'image */
     height: auto;  /* Ajuste automatiquement la hauteur */
     border-radius: 8px;
     margin-top: 20px;
@@ -187,7 +191,7 @@ nav a:hover {
 /* Styles pour le bouton de connexion */
 .login-btn {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #e4d061;
     color: white;
     border: none;
     border-radius: 5px;
@@ -196,7 +200,7 @@ nav a:hover {
 }
 
 .login-btn:hover {
-    background-color: #45a049;  /* Changement de couleur au survol */
+    background-color: #e79909;  /* Changement de couleur au survol */
 }
 
 /* Responsive Design : adaptation pour les petites écrans */
@@ -209,5 +213,67 @@ nav a:hover {
     .search-bar {
         width: 100%;
         margin-top: 10px;
+    }
+}
+
+.series-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Carte individuelle de chaque série */
+.series-card {
+    width: 150px;
+    text-align: center;
+}
+
+.series-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.series-card h2 {
+    font-size: 1em;
+    color: #f3f2eb;
+    margin: 10px 0;
+}
+
+.series-card p {
+    font-size: 0.9em;
+    padding: 0 10px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Bouton pour accéder aux détails */
+.details-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details-button:hover {
+    background-color: #ffbf00;
+}
+
+.series-card:hover {
+    transform: translateY(-5px); /* Effet de survol */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .series-grid {
+        flex-direction: column;
+        align-items: center;
     }
 }
