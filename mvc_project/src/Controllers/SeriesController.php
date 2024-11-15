@@ -26,4 +26,27 @@ class SeriesController {
             'series' => $series
         ]);
     }
+
+    public function show($id) {
+        $model = new SeriesModel();
+    
+        // Récupérer les détails de la série
+        $series = $model->getSeriesDetails($id);
+    
+        if ($series === null) {
+            // Si la série n'a pas été trouvée, afficher un message d'erreur
+            echo "Série non trouvée.";
+            return;
+        }
+    
+        // Créer une instance de la vue
+        $view = new View();
+    
+        // Passer les détails de la série à la vue
+        $view->render('SeriesDetails', [
+            'title' => $series['name'],  // Nom de la série
+            'series' => $series          // Détails de la série
+        ]);
+    }
+    
 }

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($title) ?></title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que le lien vers votre CSS est correct -->
 </head>
 <body>
     <h1><?= htmlspecialchars($title) ?></h1>
@@ -12,7 +11,7 @@
         <?php foreach ($series as $serie): ?>
             <div class="series-card">
                 <!-- Affiche l'image de la série si disponible -->
-                <a href="index.php?action=movie&id=<?= $movie['id'] ?>">
+                <a href="index.php?action=series&id=<?= htmlspecialchars($serie['id']) ?>">
                 <?php if (!empty($serie['poster_path'])): ?>
                     <img src="https://image.tmdb.org/t/p/w300<?= htmlspecialchars($serie['poster_path']) ?>" alt="<?= htmlspecialchars($serie['name']) ?>">
                 <?php else: ?>
