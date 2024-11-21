@@ -1,27 +1,4 @@
 <?php
-// namespace App\Controllers;
-
-// use App\Views\View;
-// use App\Models\MovieModel;
-
-// class MovieController {
-//     public function show($id) {
-//         // Créer une instance du modèle MovieModel
-//         $model = new MovieModel();
-        
-//         // Récupérer les détails du film, y compris les crédits (réalisateurs et acteurs)
-//         $movie = $model->getMovieDetails($id);
-
-//         // Créer une instance de la vue
-//         $view = new View();
-        
-//         // Passer les données à la vue pour affichage
-//         $view->render('movieDetails', [
-//             'title' => $movie['title'],  // Titre du film
-//             'movie' => $movie,           // Détails du film, y compris les crédits
-//         ]);
-//     }
-// }
 namespace App\Controllers;
 
 use App\Views\View;

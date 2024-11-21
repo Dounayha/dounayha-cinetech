@@ -15,8 +15,8 @@
     <header>
         <nav>
             <ul>
-            <a href="/dounayha-cinetech/mvc_project/#">Accueil</a>
-                
+             <!-- <a href="/dounayha-cinetech/mvc_project/">Accueil</a>  -->
+             <a href="index.php?action=home">Accueil</a> 
             <li class="dropdown">
                 <a href="#" class="dropbtn">Films</a>
                 <div class="dropdown-content">
@@ -45,8 +45,8 @@
                 </li>
                 
                 <!-- Bouton de connexion -->
-                <li><a href="/login" class="login-btn">Connexion</a></li>
-            </ul>
+                <li><a href="index.php?action=register" class="login-btn">S'identifier</a></li>
+                </ul>
         </nav>
     </header>
 

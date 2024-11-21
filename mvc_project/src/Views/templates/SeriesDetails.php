@@ -31,9 +31,9 @@
         <!-- Acteurs principaux -->
         <h2 class="cast-title">Acteurs principaux</h2>
         <?php if (!empty($series['credits']['cast'])): ?>
-            <ul class="cast-list">
+            <!-- <ul class="cast-list"> -->
                 <?php foreach (array_slice($series['credits']['cast'], 0, 5) as $actor): ?>
-                    <li class="cast-member"><?= htmlspecialchars($actor['name']) ?> (<?= htmlspecialchars($actor['character']) ?>)</li>
+                    <p class="cast-member"><?= htmlspecialchars($actor['name']) ?> (<?= htmlspecialchars($actor['character']) ?>)</p>
                 <?php endforeach; ?>
             </ul>
         <?php else: ?>
