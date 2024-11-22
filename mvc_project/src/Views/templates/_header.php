@@ -13,23 +13,25 @@
 <body>
     <!-- Barre de navigation -->
     <header>
-        <nav>
-            <ul>
-             <!-- <a href="/dounayha-cinetech/mvc_project/">Accueil</a>  -->
-             <a href="index.php?action=home">Accueil</a> 
+    <nav>
+        <!-- Bouton burger pour mobile -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Icône burger -->
+        </div>
+
+        <!-- Liste des liens du menu -->
+        <ul class="nav-links">
+            <li><a href="index.php?action=home">Accueil</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Films</a>
                 <div class="dropdown-content">
-                <a href="index.php?action=all_movies">Tous les films</a>
-                    <!-- <a href="?action=movie">Tous les Films</a> -->
+                    <a href="index.php?action=all_movies">Tous les films</a>
                     <a href="?action=movie&genre=28">Action</a>
                     <a href="?action=movie&genre=16">Animation</a>
                     <a href="?action=movie&genre=878">Science Fiction</a>
                     <a href="?action=movie&genre=35">Comédie</a>
                 </div>
             </li>
-            
-            <!-- Menu déroulant pour les séries -->
             <li class="dropdown">
                 <a href="#" class="dropbtn">Séries</a>
                 <div class="dropdown-content">
@@ -39,28 +41,21 @@
                     <a href="?action=series&genre=10749">Romance</a>
                 </div>
             </li>
-                <!-- Barre de recherche avec autocomplétion -->
-                <li>
-                    <input type="text" id="search" placeholder="Rechercher..." class="search-bar">
-                </li>
-                
-                <!-- Bouton de connexion -->
-                <li><a href="index.php?action=register" class="login-btn">S'identifier</a></li>
-                </ul>
-        </nav>
-    </header>
+            <li>
+                <input type="text" id="search" placeholder="Rechercher..." class="search-bar">
+            </li>
+            <li><a href="index.php?action=register" class="login-btn">S'identifier</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <script>
-        // Script pour l'autocomplétion de la barre de recherche
-        $(document).ready(function() {
-            var availableTags = [
-                "Animation", "Horreur", "Science Fiction", "Action", "Comédie", "Drame", "Aventure", "Romance"
-            ]; // Exemple de catégories, vous pouvez les adapter à votre besoin
-            
-            $("#search").autocomplete({
-                source: availableTags
-            });
-        });
-    </script>
+    
+      <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+
 </body>
 </html>
